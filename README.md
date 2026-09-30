@@ -2,7 +2,7 @@
 
 Bem-vindo(a) ao repositório do meu portfólio online! Este projeto reúne as minhas principais criações nas áreas de **Design Gráfico**, **Peças para E-commerce**, **Visualização 3D** e **Desenvolvimento Web**.
 
-🔗 **Acesse o site ao vivo:** [https://seuusuario.github.io/portfolio/](https://seuusuario.github.io/portfolio/)
+🔗 **Acesse o site ao vivo:** https://idianara8.github.io/portfolio/
 
 ---
 
