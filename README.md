@@ -29,7 +29,7 @@ Este site foi desenvolvido com foco em apresentar de forma clara e ágil soluç�
 
 ## 📄 Download do Currículo
 
-O currículo atualizado em versão PDF pode ser descarregado diretamente através do site ou [clicando aqui](https://drive.google.com/uc?export=download&id=1rbuWWkPZqC-yQ9CtKnN2z1Rq1iKn22Fm).
+O currículo atualizado em versão PDF pode ser descarregado diretamente através do site ou [clicando aqui](https://drive.google.com/uc?export=download&id=1Qg81GtP3gpVwfRM1qVy1bxBOgqgclbL_).
 
 ---
 
