@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER E MENU LATERAL */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #dc3545;
+    font-size: 2.5rem;
+}
+
+header span {
+    color: aliceblue;
+}
+
+/* Ícone dos 3 Risquinhos */
+header i#menu-icon {
+    color: #f7f7f7;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Esconde o menu por padrão para abrir na lateral */
+header .navegacao-primaria {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Escondido fora da tela */
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.8);
+}
+
+/* Classe ativada via JavaScript quando clica no ícone */
+header .navegacao-primaria.active {
+    right: 0;
+}
+
+header .navegacao-primaria li a {
+    color: aliceblue;
+    font-size: 1.3rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+header .navegacao-primaria li a:hover {
+    color: #dc3545;
+}
+
+/* SEÇÃO INICIAL (HERO) COM FOTO DE FUNDO */
+.section-div {
+    animation: inicializar .7s forwards;
+    min-height: 100vh;
+    padding: 120px 60px 60px 60px;
+    
+    /* Foto de Fundo com camada escura para dar leitura ao texto */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/foto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-hero {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conteudo-hero h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f7f7f7;
+}
+
+.conteudo-hero p {
+    font-weight: 200;
+    color: #f7f7f7;
+    line-height: 1.6;
+}
+
+.conteudo-hero a {
+    align-self: flex-start;
+    color: #f7f7f7;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.conteudo-hero a:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+
+/* --- EFEITO DIGITAÇÃO NA VELOCIDADE CORRETA COM PAUSA DE 1 MINUTO --- */
+
+.digitando {
+    display: inline-block;
+    border-right: 5px solid #dc3545;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f7f7f7;
+    vertical-align: bottom;
+    
+    /* 1. Digita em 3.5s rápidos */
+    /* 2. O ciclo completo (mostrar + esperar 60s) dura 64s */
+    animation: 
+        digitarVeloz 3.5s steps(35, end) forwards,
+        cicloPausa 64s infinite,
+        piscarCursor .75s step-end infinite;
+}
+
+/* Animação de digitação rápida em 3.5 segundos */
+@keyframes digitarVeloz {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animação que esconde a frase rapidamente a cada 64s para reiniciar a digitação */
+@keyframes cicloPausa {
+    0% { opacity: 1; }
+    98% { opacity: 1; }  /* Mantém 100% visível durante os 60s de pausa */
+    99% { opacity: 0; }  /* Apaga rápido */
+    100% { opacity: 1; } /* Reaparece e aciona o inicio da animação */
+}
+
+/* Animação do cursor pisca-pisca */
+@keyframes piscarCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #dc3545; }
+}
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* --- ESTILOS DA SEÇÃO SOBRE MIM --- */
+
+main.sobre, .sobre {
+    background-color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.sobre_titulo {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #f7f7f7;
+}
+
+.sobre_titulo h1 {
+    font-size: 2.5rem;
+    color: #dc3545;
+    margin-bottom: 15px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.sobre_titulo div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sobre_titulo span { 
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #dc3545;
+}
+
+.sobre_conteudo {
+    display: grid;
+    grid-template-columns: 240px 1fr 260px;
+    gap: 35px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sobre_conteudo img {
+    width: 100%;
+    max-width: 240px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: grayscale(100%) blur(1px);
+    transition: filter 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.sobre_conteudo img:hover {
+    filter: grayscale(0%) blur(0px);
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(220, 53, 69, 0.3);
+}
+
+.sobre_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sobre_texto p {
+    font-weight: 300;
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.sobre_info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-left: 1px solid #222;
+    padding-left: 20px;
+}
+
+.sobre_info p {
+    color: #888;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre_info i {
+    color: #dc3545;
+    font-size: 0.95rem;
+    min-width: 16px;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE PARA O SOBRE MIM EM CELULARES */
+@media (max-width: 900px) {
+    .sobre_conteudo {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .sobre_info {
+        border-left: none;
+        border-top: 1px solid #222;
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%;
+    }
+    /* --- ESTILOS EXCLUSIVOS PARA PORTFÓLIO E CONTATO --- */
+
+/* Centraliza as imagens apenas dentro da seção de portfólio e contato */
+#portfolio img, 
+#contato img,
+.portfolio img,
+.contato img {
+    max-width: 750px !important;  /* Define o tamanho máximo para as imagens */
+    width: 90% !important;         /* Ajusta em ecrãs menores */
+    height: auto !important;       /* Mantém a proporção */
+    display: block !important;
+    margin: 30px auto !important;  /* Centraliza horizontalmente */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* --- CENTRALIZAÇÃO COMPLETA DAS SEÇÕES DO PORTFÓLIO --- */
+
+/* Força todas as seções do portfólio a ficarem numa única coluna centralizada */
+.portfolio,
+#portfolio,
+.portfolio_grid,
+.portfolio_card,
+.secao-projeto,
+.contato_container {
+    display: flex !important;
+    flex-direction: column !important; /* Empilha o texto e a imagem centralizados */
+    align-items: center !important;    /* Centraliza na horizontal */
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 900px !important;       /* Limita a largura para não esticar em tela cheia */
+    margin: 0 auto 40px auto !important; /* Centraliza a seção inteira na tela */
+}
+
+/* Garante que qualquer container de texto interno fique centralizado */
+.portfolio_info,
+.portfolio_texto,
+.sobre_texto {
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto 20px auto !important;
+}
+
+/* Redimensiona e centraliza todas as imagens do portfólio */
+#portfolio img,
+.portfolio img,
+.portfolio_card img,
+.contato_container img {
+    width: 100% !important;
+    max-width: 800px !important;       /* Tamanho ideal para leitura das artes */
+    height: auto !important;
+    display: block !important;
+    margin: 20px auto !important;       /* Margem auto alinha exatamente ao meio */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Ajuste específico para a imagem de contato no final */
+#contato img,
+.contato img {
+    max-width: 500px !important;
+}
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Importação do Font Awesome para os ícones funcionarem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Idianara<span>Barbosa</span></h1>
+        
+        <nav>
+            <ul class="navegacao-primaria" id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Ícone dos três risquinhos com evento de clique -->
+        <i class="fa-solid fa-bars" id="menu-icon" onclick="toggleMenu()"></i>
+    </header>
+
+    <!-- Seção Inicial (Hero) com Foto de Fundo -->
+    <main class="section-div" id="inicio">
+        <div class="conteudo-hero">
+            <h2>Olá!</h2>
+            <h2 class="digitando">Eu sou uma entusiasta tecnológica</h2>
+            <p>Estudante de Engenharia de Software, apaixonada por aprender e explorar novas possibilidades no universo digital. 
+               Combino criatividade e raciocínio técnico para dominar ferramentas rapidamente, 
+               criar soluções práticas e resolver problemas de forma eficiente. 
+               Estou em constante evolução!</p>
+            <a href="https://drive.google.com/uc?export=download&id=1rbuWWkPZqC-yQ9CtKnN2z1Rq1iKn22Fm" target="_blank" class="btn-cv">
+  📄 Baixar Currículo (PDF)
+</a>
+        </div>
+    </main>
+
+    <!-- Seção Sobre Mim -->
+    <section class="sobre" id="sobre" aria-label="Seção sobre mim">
+        <div class="sobre_titulo">
+            <h1>Sobre Mim</h1>
+            <div aria-label="Seção apenas de ilustração de botões">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="sobre_conteudo">
+            <img src="img/foto.jpg" alt="Minha Foto">
+
+            <div class="sobre_texto">
+                <p>Tenho 27 anos, sou casada, mãe de uma menina de 7 anos e me sinto realizada ao aprender coisas novas. Minha jornada na tecnologia começou pela curiosidade: sempre quis entender como as coisas funcionam por trás das telas. Essa busca começou com vídeos e documentários e logo se transformou em uma paixão pelo mundo corporativo da atualidade.</p>
+                <p>Essa vontade de ir além me levou à faculdade de Engenharia de Software.</p>
+                <p>Hoje, uno a disciplina e a organização da minha rotina pessoal ao meu perfil autodidata para expandir minha concepção. Estou em constante evolução e empolgada para expandir meus conhecimentos em projetos reais.</p> 
+            </div>
+
+            <div class="sobre_info">
+                <p><i class="fa-solid fa-calendar-days"></i> Data de nascimento: 26 de Maio de 1999</p>
+                <p><i class="fa-sharp fa-solid fa-laptop-code"></i> Autônoma: Disponível</p>
+                <p><i class="fa-solid fa-location-dot"></i> Endereço: Três Coroas, RS - Brasil</p>
+                <p><i class="fa-sharp fa-solid fa-globe"></i> Idiomas: Português</p>
+                <p><i class="fa-solid fa-flag"></i> Nacionalidade: Brasileira</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script simples para abrir/fechar o menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+
+<!-- Seção Portfólio (Imagens 1 a 15) -->
+<section class="portfolio" id="portfolio">
+    <div class="sobre_titulo">
+        <h1>Meu Portfólio</h1>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="portfolio_grid">
+        <div class="portfolio_card"><img src="img/image1.jpg" alt="Projeto 1"></div>
+        <div class="portfolio_card"><img src="img/image2.jpg" alt="Projeto 2"></div>
+        <div class="portfolio_card"><img src="img/image3.jpg" alt="Projeto 3"></div>
+        <div class="portfolio_card"><img src="img/image4.jpg" alt="Projeto 4"></div>
+        <div class="portfolio_card"><img src="img/image5.jpg" alt="Projeto 5"></div>
+        <div class="portfolio_card"><img src="img/image6.jpg" alt="Projeto 6"></div>
+        <div class="portfolio_card"><img src="img/image7.jpg" alt="Projeto 7"></div>
+        <div class="portfolio_card"><img src="img/image8.jpg" alt="Projeto 8"></div>
+        <div class="portfolio_card"><img src="img/image9.jpg" alt="Projeto 9"></div>
+        <div class="portfolio_card"><img src="img/image10.jpg" alt="Projeto 10"></div>
+        <div class="portfolio_card"><img src="img/image11.jpg" alt="Projeto 11"></div>
+        <div class="portfolio_card"><img src="img/image12.jpg" alt="Projeto 12"></div>
+        <div class="portfolio_card"><img src="img/image13.jpg" alt="Projeto 13"></div>
+        <div class="portfolio_card"><img src="img/image14.jpg" alt="Projeto 14"></div>
+        <div class="portfolio_card"><img src="img/image15.jpg" alt="Projeto 15"></div>
+    </div>
+</section>
+
+<!-- Seção Contato (Imagem 16) -->
+<section class="contato" id="contato">
+    <div class="sobre_titulo">
+        <h1>Contato</h1>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="contato_container">
+        <img src="img/image16.jpg" alt="Informações de Contato">
+    </div>
+</section>
+</body>
+</html>
